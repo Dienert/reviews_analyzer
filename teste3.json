@@ -1,0 +1,215 @@
+{
+    "FamilyIds": [
+        "1100030024"
+    ],
+    "EANs": [
+        "9780316017930"
+    ],
+    "ISBNs": [
+        "0316017930"
+    ],
+    "AttributesOrder": [
+        "AVAILABILITY",
+        "BV_FE_EXPAND",
+        "BV_FE_FAMILY"
+    ],
+    "Attributes": {
+        "AVAILABILITY": {
+            "Id": "AVAILABILITY",
+            "Values": [
+                {
+                    "Value": "True",
+                    "Locale": None
+                }
+            ]
+        },
+        "BV_FE_EXPAND": {
+            "Id": "BV_FE_EXPAND",
+            "Values": [
+                {
+                    "Value": "BV_FE_FAMILY: 1100030024",
+                    "Locale": None
+                }
+            ]
+        },
+        "BV_FE_FAMILY": {
+            "Id": "BV_FE_FAMILY",
+            "Values": [
+                {
+                    "Value": "1100030024",
+                    "Locale": None
+                }
+            ]
+        }
+    },
+    "ImageUrl": "https: //prodimage.barnesandnoble.com/pimages/9780316017930_p0_v4_s550x406.jpg",
+    "Name": "Outliers: The Story of Success",
+    "Id": "9780316017930",
+    "CategoryId": "4ifmy5241k64162x4631jyy8n",
+    "BrandExternalId": "213867",
+    "Brand": {
+        "Id": "213867",
+        "Name": "Little, Brown and Company"
+    },
+    "Active": True,
+    "ProductPageUrl": "https://www.barnesandnoble.com/w/outliers-malcolm-gladwell/1100030024?ean=9780316017930",
+    "Disabled": False,
+    "Description": None,
+    "ReviewIds": [],
+    "ManufacturerPartNumbers": [],
+    "StoryIds": [],
+    "ModelNumbers": [],
+    "QuestionIds": [],
+    "UPCs": [],
+    "ReviewStatistics": {
+        "RecommendedCount": 2,
+        "NotHelpfulVoteCount": 211,
+        "ContextDataDistributionOrder": [
+            "ReaderType",
+            "Spoilers_2"
+        ],
+        "ContextDataDistribution": {
+            "ReaderType": {
+                "Id": "ReaderType",
+                "Values": [
+                    {
+                        "Count": 1,
+                        "Value": "CasualReader"
+                    },
+                    {
+                        "Count": 1,
+                        "Value": "FictionLover"
+                    },
+                    {
+                        "Count": 1,
+                        "Value": "NonfictionBuff"
+                    }
+                ]
+            },
+            "Spoilers_2": {
+                "Id": "Spoilers_2",
+                "Values": [
+                    {
+                        "Count": 1,
+                        "Value": "Yes"
+                    },
+                    {
+                        "Count": 3,
+                        "Value": "No"
+                    }
+                ]
+            }
+        },
+        "RatingsOnlyReviewCount": 957,
+        "FirstSubmissionTime": "2008-10-30T18: 28: 35.000+00: 00",
+        "LastSubmissionTime": "2021-09-06T20: 45: 45.000+00: 00",
+        "NotRecommendedCount": 1,
+        "RatingDistribution": [
+            {
+                "RatingValue": 5,
+                "Count": 610
+            },
+            {
+                "RatingValue": 4,
+                "Count": 389
+            },
+            {
+                "RatingValue": 3,
+                "Count": 140
+            },
+            {
+                "RatingValue": 2,
+                "Count": 75
+            },
+            {
+                "RatingValue": 1,
+                "Count": 71
+            }
+        ],
+        "TotalReviewCount": 1285,
+        "FeaturedReviewCount": 0,
+        "AverageOverallRating": 4.083268482490272,
+        "HelpfulVoteCount": 264,
+        "SecondaryRatingsAveragesOrder": [],
+        "TagDistribution": {},
+        "TagDistributionOrder": [],
+        "OverallRatingRange": 5,
+        "SecondaryRatingsAverages": {}
+    },
+    "TotalReviewCount": 1285,
+    "FilteredReviewStatistics": {
+        "RecommendedCount": 2,
+        "NotHelpfulVoteCount": 211,
+        "ContextDataDistributionOrder": [
+            "ReaderType",
+            "Spoilers_2"
+        ],
+        "ContextDataDistribution": {
+            "ReaderType": {
+                "Id": "ReaderType",
+                "Values": [
+                    {
+                        "Count": 1,
+                        "Value": "CasualReader"
+                    },
+                    {
+                        "Count": 1,
+                        "Value": "FictionLover"
+                    },
+                    {
+                        "Count": 1,
+                        "Value": "NonfictionBuff"
+                    }
+                ]
+            },
+            "Spoilers_2": {
+                "Id": "Spoilers_2",
+                "Values": [
+                    {
+                        "Count": 1,
+                        "Value": "Yes"
+                    },
+                    {
+                        "Count": 3,
+                        "Value": "No"
+                    }
+                ]
+            }
+        },
+        "RatingsOnlyReviewCount": 957,
+        "FirstSubmissionTime": "2008-10-30T18: 28: 35.000+00: 00",
+        "LastSubmissionTime": "2021-09-06T20: 45: 45.000+00: 00",
+        "NotRecommendedCount": 1,
+        "RatingDistribution": [
+            {
+                "RatingValue": 5,
+                "Count": 610
+            },
+            {
+                "RatingValue": 4,
+                "Count": 389
+            },
+            {
+                "RatingValue": 3,
+                "Count": 140
+            },
+            {
+                "RatingValue": 2,
+                "Count": 75
+            },
+            {
+                "RatingValue": 1,
+                "Count": 71
+            }
+        ],
+        "TotalReviewCount": 1285,
+        "FeaturedReviewCount": 0,
+        "AverageOverallRating": 4.083268482490272,
+        "HelpfulVoteCount": 264,
+        "SecondaryRatingsAveragesOrder": [],
+        "TagDistribution": {},
+        "TagDistributionOrder": [],
+        "OverallRatingRange": 5,
+        "SecondaryRatingsAverages": {}
+    }
+}
