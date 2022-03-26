@@ -10,8 +10,8 @@ class BarnesandnobleSpider(scrapy.Spider):
     limit = 100
     page = 0
     totalPages = None
-    # productId = '9780316017930' # ISBN-13 of product - Outliers: The Story of Success
-    productId = '9780553381689' # ISBN-13 of product - A Game of Thrones (A Song of Ice and Fire #1)
+    productId = '9780316017930' # ISBN-13 of product - Outliers: The Story of Success
+    # productId = '9780553381689' # ISBN-13 of product - A Game of Thrones (A Song of Ice and Fire #1)
     url = 'https://api.bazaarvoice.com/data/batch.json\
 ?passkey=caC2Xb0kazery1Vgcza74qqETLsDbclQWr3kbWiGXSvjI\
 &apiversion=5.5\
