@@ -32,7 +32,7 @@ sentiments = types_of_sentiments.keys()
 # Top text area
 with st.container():
     # st.title("Sentiment Analisys")
-    st.title("Reviews for the book: Outliers: The Story of Success")
+    st.title("Reviews for the book \"Outliers: The Story of Success\"")
 
 (column_1, column_2, column_3), test_data = st.columns(3), False
 with column_1:
