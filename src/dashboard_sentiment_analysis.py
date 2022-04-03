@@ -1,3 +1,4 @@
+from cProfile import label
 from email.utils import parsedate
 from turtle import position
 import streamlit as st
@@ -72,36 +73,36 @@ def load_dataset_before_preprocessing():
 def load_dataset_after_preprocessing():
     path = f'../dataset/graphs/concat_after_processing.csv'
     df = pd.read_csv(path)
-    ddf = df.dropna(subset=['processing5'])
-    return ddf
+    df = df.dropna(subset=['processing5'])
+    return df
 
 # Get data with date
 @st.cache()
 def load_dataset_with_date():
     path = f'../dataset/joined/reviews-outliers-the_story_of_success_processed.csv'
     df = pd.read_csv(path)
-    ddf = df.dropna(subset=['date'])
-    return ddf
+    df = df.dropna(subset=['date'])
+    return df
 
 if visualization_chosen == 'Positive versus Negative':
-    ddf = load_dataset_after_preprocessing()
+    ddf = load_dataset_after_preprocessing().copy()
 elif visualization_chosen == 'Wordcloud before preprocessing':
-    ddf = load_dataset_before_preprocessing()
+    ddf = load_dataset_before_preprocessing().copy()
     # print(len(ddf))
 elif visualization_chosen == 'Worcloud after preprocessing':
-    ddf = load_dataset_after_preprocessing()
+    ddf = load_dataset_after_preprocessing().copy()
     # ddf = ddf.dropna(subset=['processing5'])
     # print(len(ddf))
 elif visualization_chosen == 'Top 10 words before preprocessing':
-    ddf = load_dataset_before_preprocessing()
+    ddf = load_dataset_before_preprocessing().copy()
     # print(len(ddf))
 elif visualization_chosen == 'Top 10 words after preprocessing':
-    ddf = load_dataset_after_preprocessing()
+    ddf = load_dataset_after_preprocessing().copy()
     # print(len(ddf))
 elif visualization_chosen == 'Line chart':
-    ddf = load_dataset_with_date()
+    ddf = load_dataset_with_date().copy()
 else:
-    ddf = load_dataset_after_preprocessing()
+    ddf = load_dataset_after_preprocessing().copy()
 
 
 def pie_plot_sentiment(text):
@@ -128,7 +129,7 @@ def plot_bar_graph_reviews_per_year(df):
 
     df.index = pd.to_datetime(df['date'], format='%Y-%m-%d')
 
-    figure, axes = plt.subplots(2, 1, figsize=(15, 10), sharey=True)
+    figure = plt.figure(figsize=(12,8))
 
     negatives_per_year = df[df['stars'] == 0]
     
@@ -140,19 +141,13 @@ def plot_bar_graph_reviews_per_year(df):
     res['positives'] = positives_per_year.groupby([positives_per_year.index.year])['stars'].count()
     print(res['positives'])
     
-    # figure = plt.figure(figsize=(12,8))
-    # ax = sns.barplot(data = res, x = res.index, y = res['negatives'], color ='orange')
-    # ax.set(ylabel = "Negative reviews")
-
-    # ax_pos = sns.barplot(data = res, x = res.index, y = res['positives'], color ='green')
-    # ax_pos.set(ylabel = "Positive reviews")
-
-    sns.barplot(ax=axes[0],x = res.index, y = res['negatives'], color ='orange')
-    axes[0].set_title("Negative reviews")
+    ax = sns.lineplot(x = res.index, y = res['negatives'], color ='red', label='Negative')
+    ax.set_title("Sentiment through the time")
+    ax.set_xlabel("Years")
+    ax.set_ylabel("Number of Reviews")
 
     # Charmander
-    sns.barplot(ax=axes[1], x = res.index, y = res['positives'], color ='green')
-    axes[1].set_title("Positive reviews")
+    sns.lineplot(ax=ax, x = res.index, y = res['positives'], color ='green', label='Positive')
 
     plt.show()
     st.pyplot(figure, use_container_width=True)
