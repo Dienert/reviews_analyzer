@@ -80,11 +80,7 @@ def load_dataset_after_preprocessing():
 def load_dataset_with_date():
     path = f'../dataset/joined/reviews-outliers-the_story_of_success_processed.csv'
     df = pd.read_csv(path)
-    print('------------------1 ')
-    # df = replaceStarBy0or1(df)
-    
     ddf = df.dropna(subset=['date'])
-    print('------------------2 ')
     return ddf
 
 if visualization_chosen == 'Positive versus Negative':
@@ -130,7 +126,9 @@ def pie_plot_sentiment(text):
 def plot_bar_graph_reviews_per_year(df):
 
 
-    figure, axes = plt.subplots(2, 1, figsize=(15, 5), sharey=True)
+    df.index = pd.to_datetime(df['date'], format='%Y-%m-%d')
+
+    figure, axes = plt.subplots(2, 1, figsize=(15, 10), sharey=True)
 
     negatives_per_year = df[df['stars'] == 0]
     
